@@ -1,0 +1,20 @@
+[package]
+name = "all-model-chat"
+version = "1.8.6"
+description = "专为 Google Gemini API 生态打造的旗舰级全能 AI 工作台"
+authors = ["从何开始123"]
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[build-dependencies]
+tauri-build = { version = "1", features = [] }
+
+[dependencies]
+tauri = { version = "1", features = [ "shell-open", "process-relaunch", "process-exit", "dialog-all", "fs-all", "http-all", "notification-all", "path-all", "protocol-all", "window-all"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+[features]
+# This feature is used for production builds or when a dev server is not specified, DO NOT REMOVE!!
+custom-protocol = ["tauri/custom-protocol"]

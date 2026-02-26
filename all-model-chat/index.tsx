@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 
 // Import Global Styles
+import './styles/vendor-local.css';
 import './styles/main.css';
 import './styles/animations.css';
 import './styles/markdown.css';

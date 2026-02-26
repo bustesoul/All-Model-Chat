@@ -1,0 +1,18 @@
+/*
+ * vendor-local.css
+ * 从 node_modules 导入带字体文件依赖的 CSS 库
+ * Vite 会自动解析 CSS 中的 url() 引用，将字体文件复制到 dist 输出
+ *
+ * 注意：主题切换类 CSS（github-markdown、highlight.js）不在此处导入，
+ * 它们通过独立 <link> 标签加载（保留 id/disabled 属性供运行时切换）
+ */
+
+/* Font Awesome 图标（含 webfonts 字体文件） */
+@import '@fortawesome/fontawesome-free/css/all.min.css';
+
+/* KaTeX 数学公式渲染（含 KaTeX 字体文件） */
+@import 'katex/dist/katex.min.css';
+
+/* React PDF 页面样式 */
+@import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
+@import 'react-pdf/dist/esm/Page/TextLayer.css';
